@@ -1,16 +1,23 @@
-import qrcode, os
+import qrcode
+import os
 
-url = input("Digite la url o el texto a convertir a QR:\n")
-filename = "qr-img.png"
-counter = 1
-while os.path.exists(filename):
-    filename = f"qr-img_{counter}.png"
-    counter += 1
-img = qrcode.make(url)
-img.save(filename)
- 
+while True:
+    url = input("Digite la URL o el texto a convertir a QR (o escriba 'salir' para finalizar):\n")
 
-print(f"Se ha generado el archivo {filename} en la siguiente ruta:")
-print(os.path.abspath(filename))
+    if url.lower() == 'salir':
+        print("¡Hasta luego!")
+        break
 
-os.system(f"open {filename}")
+    filename = "qr-img.png"
+    counter = 1
+    while os.path.exists(filename):
+        filename = f"qr-img_{counter}.png"
+        counter += 1
+
+    img = qrcode.make(url)
+    img.save(filename)
+
+    print(f"Se ha generado el archivo {filename} en la siguiente ruta:")
+    print(os.path.abspath(filename))
+
+    os.system(f"open {filename}")
