@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Instalar dependencias
+    pip install -r requirements.txt & 
+
+# Ejecutar comandos adicionales aquí
+    # Crear e Activar entorno virtual
+        virtualenv venv
+        source venv/bin/activate
+#Ejecutar app.py,EN la terminal digita o pega la url o texo. 
+Esto generar un archivo con el nombre qr-img.png, el cual es la imagen QR 
