@@ -2,10 +2,10 @@ import qrcode
 import os
 
 while True:
-    url = input("Digite la URL o el texto a convertir a QR (o escriba 'salir' para finalizar):\n")
+    url = input("💻 👉 Digite la URL o el texto a convertir a QR 📸 (o escriba 'salir' para finalizar ❌🚪):\n")
 
     if url.lower() == 'salir':
-        print("¡Hasta luego!")
+        print("¡Hasta luego! 👋")
         break
 
     filename = "qr-img.png"
